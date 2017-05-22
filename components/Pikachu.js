@@ -18,6 +18,10 @@ export default class Pikachu extends React.Component {
     pikachu.width = this.state.size;
   }
 
+  componentDidUpdate() {
+    this.resizePikachu();
+  }
+
   makeBigger() {
     this.setState({
       size: this.state.size + 10
